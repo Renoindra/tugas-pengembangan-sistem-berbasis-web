@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Harga</title>
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link rel="stylesheet" href="static/css/listharga.css" />
+</head>
+<body>
+    <div class="layar-penuh">
+        <header id="home">
+            <div class="overlay"></div>
+            <video autoplay muted loop>
+                <source src="static/images/video-indonesia.mp4" type="video/mp4" />
+            </video>
+            <div class="intro">
+                <h3>Daftar Harga</h3>
+            </div>
+        </header>
+        
+        <nav>
+            <div class="layar-dalam">
+                <div class="logo">
+                    <a href=""><img src="static/images/logo-white.png" class="putih" /></a>
+                    <a href=""><img src="static/images/logo-black.png" class="hitam" /></a>
+                  </div>
+                  <div class="menu">
+                    <a href="#" class="tombol-menu">
+                      <span class="garis"></span>
+                      <span class="garis"></span>
+                      <span class="garis"></span>
+                    </a>
+                    
+                    <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="{{ url_for('listharga') }}">List Harga</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section id="list-harga">
+                <div class="layar-dalam">
+                    <h3>Daftar Harga Wisata</h3>
+                    <ul class="price-list">
+                        <li>
+                            <h4>Paket Bali</h4>
+                            <p>Rp 5.000.000 / orang</p>
+                        </li>
+                        <li>
+                            <h4>Paket Raja Ampat</h4>
+                            <p>Rp 8.000.000 / orang</p>
+                        </li>
+                        <li>
+                            <h4>Paket Lombok</h4>
+                            <p>Rp 4.500.000 / orang</p>
+                        </li>
+                        <!-- Tambahkan paket lainnya sesuai kebutuhan -->
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+    <footer id="Form Ticket">
+        <div class="container">
+            <div id="popupMessage" class="popup">
+                <p>TERIMAKASIH</p>
+                <button onclick="closePopup()">Tutup</button>
+            </div>        
+            <h2>Form Tiket</h2>
+            <form>
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Nama Anda">
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Akun Email">
+            
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" placeholder="Tulis Tujuan Wisata"></textarea>
+            
+                <button type="submit">Kirim</button>
+            </form>
+            <div id="responseMessage"></div>
+        </div>
+        <div class="layar-dalam">
+            <div class="copyright">&copy; UNTAG SISTEKIN B</div>
+        </div>
+    </footer>
+</div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/listharga.js') }}"></script>
+</body>
+</html>
